@@ -17,7 +17,6 @@
     --modal-btn-color: #E7E9FC;
     --rgba-hiro: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 
-
 }
 
 
@@ -165,9 +164,8 @@ a span {
 .menu-link::after {
     content: '';
     position: relative;
-    top: 22px;
+    top: 25px;
     left: 0px;
-    bottom: 0px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -181,14 +179,7 @@ a span {
 
 }
 
-.current::after {
-    display: block;
-    color: var(--active-accent-color);
-}
 
-.menu-link.current {
-    color: var(--active-accent-color);
-}
 
 
 
@@ -359,11 +350,9 @@ a span {
 .activiti-list {
     display: flex;
     justify-content: center;
+    gap: 24px;
 }
 
-.activiti-item {
-    margin-right: 24px;
-}
 
 .activiti-item:nth-child(3n) {
     margin-right: 0px;
@@ -402,7 +391,7 @@ a span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0px 24px;
+    gap: 72px 24px;
 }
 
 .team-list-bord {
@@ -907,7 +896,6 @@ a.text:focus {
 }
 
 .feedback {
-    width: 360px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -1110,6 +1098,21 @@ textarea {
         display: none;
     }
 
+    /* <!------------------ Model window ----------------> */
+    .backdrop>.modal {
+        width: 95%;
+        max-width: 392px;
+        height: 95%;
+        max-height: 586px;
+        overflow: scroll;
+
+    }
+
+    .feedback {
+        text-align: center;
+    }
+
+
     /* <!--------- Mobile-Menu ---------> */
     .mob-menu-open {
         background-color: transparent;
@@ -1186,6 +1189,15 @@ textarea {
 
     .mobile-menu-item:not(:last-child) {
         margin-bottom: 40px;
+    }
+
+    .current::after {
+        display: block;
+        color: var(--active-accent-color);
+    }
+
+    .mobile-menu-link.current {
+        color: var(--active-accent-color);
     }
 
 
@@ -1303,10 +1315,6 @@ textarea {
 
     /* <------------------Company slogans media------------------> */
 
-    .slogans-item {
-        padding-bottom: 72px;
-    }
-
     .slogans-item:nth-last-child(-n + 1) {
         padding-bottom: 0;
     }
@@ -1317,6 +1325,10 @@ textarea {
         line-height: 1.11;
         text-align: center;
 
+    }
+
+    .slogans-list {
+        gap: 72px 24px;
     }
 
     .slogans-icon-link {
@@ -1347,12 +1359,10 @@ textarea {
     }
 
     .team-list {
-        display: block;
+        gap: 72px 24px;
     }
 
-    .team-list-bord {
-        margin-bottom: 72px;
-    }
+
 
     .team-list-bord:nth-last-child(-n + 1) {
         margin-bottom: 0;
@@ -1422,9 +1432,6 @@ textarea {
     /* <!---------------------- Form-Footer ----------------------> */
 
     .footer-form {
-        height: auto;
-        max-width: 398px;
-        min-width: 320px;
         margin-left: 0px
     }
 
@@ -1445,7 +1452,7 @@ textarea {
     }
 
     .footer-input {
-        width: 398px;
+        width: 100%;
 
     }
 
@@ -1480,7 +1487,10 @@ textarea {
         display: flex;
     }
 
-
+    /*--------Site nav--------*/
+    .menu-link::after {
+        top: 22px;
+    }
 
     /* ----------------Cap---------------- */
     .section-cap {
@@ -1501,6 +1511,7 @@ textarea {
     .mobile-menu {
         display: none;
     }
+
 
 
 
@@ -1564,7 +1575,6 @@ textarea {
 
     .slogans-item {
         width: calc((100% - 24px) / 2);
-        padding-bottom: 72px;
 
     }
 
@@ -1598,15 +1608,6 @@ textarea {
     .section-team {
         padding-bottom: 104px;
 
-    }
-
-    .team-list {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .team-list-bord {
-        margin-bottom: 62px;
     }
 
     .team-list-bord:nth-last-child(-n + 2) {
